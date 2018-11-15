@@ -1,0 +1,155 @@
+.event
+  text-align left
+  border-radius 1.25rem
+  background #FAFAFA
+  color #333333
+  display flex
+  flex-direction column
+  overflow hidden
+  position relative
+  transition all .2s
+
+  &:hover
+    background #F3F3F3
+    box-shadow 0 2px 6px 0 rgba(197, 186, 186, 0.5)
+
+    &-body
+      background #F3F3F3
+
+    .event-iconNext, .event-iconClose
+      visibility visible
+      opacity 1
+
+  &-title
+    padding-left 1rem
+    font-weight bold
+    font-size 0.875rem
+    margin 0
+
+  &-icon
+    width 2.25rem
+    height 2.25rem
+
+  &-iconNext, &-iconClose
+    transition opacity .2s
+    opacity 0
+    visibility hidden
+    cursor pointer
+    position absolute
+    right 1.5rem
+
+  &-iconClose
+    top 1.5rem
+    stroke #666666
+    fill #666666
+
+  &-iconNext
+    bottom 1.5rem
+
+  &-description
+    margin 0
+    font-size 1.125rem
+
+  &-info
+    font-size 0.875rem
+    padding-top 1.625rem
+    display flex
+    justify-content space-between
+
+    &-value
+      font-weight bold
+
+  &-body
+    padding 0 1rem 1rem 1rem
+    flex 1 0
+    border-top-left-radius 1.25rem
+    border-top-right-radius 1.25rem
+
+  &-header
+    padding 1rem
+
+  &-headline
+    display flex
+    align-items center
+
+  &-subheading
+    display flex
+    justify-content space-between
+    padding-top 0.875rem
+    font-size 0.75rem
+
+  &-image
+    margin-top 1rem
+    width 100%
+
+  &-buttons
+    display flex
+    justify-content space-between
+    padding-top 1.5rem
+
+    .button:not(:first-child)
+      margin-left 1.125rem
+
+  &-player
+    padding-top 1rem
+
+  &-chart
+    padding 2rem 0 1rem
+  
+  // modificators
+  &_size-s
+    padding-bottom 4px
+    .event-subheading
+      display flex
+      flex-direction row
+      padding-bottom 0
+    
+  &_critical
+    background #DB5341
+    &:hover
+      background #DB5341
+
+    .event-header
+      color #fff
+
+    .event-body
+      padding-top 1rem
+      background #F3F3F3
+
+    .event-iconClose
+      stroke #fff
+      fill #fff
+
+@media screen and (min-width: 750px)
+  .event
+    &-body, &-header
+      padding 1.25rem
+
+    &-icon
+      width 3.25rem
+      height 3.25rem
+
+    &-title
+      font-size 1.5rem
+
+    &-subheading
+      font-size 1.125rem
+
+    &-description
+      font-size 1.25rem
+
+    &-buttons
+      justify-content flex-start
+
+    &-info
+      font-size 1.125rem
+      justify-content flex-start
+      &-humidity
+        padding-left 3.25rem
+
+  .event_size_s
+    .event-subheading
+      flex-direction column
+
+    .event-source
+      padding-bottom 20px
